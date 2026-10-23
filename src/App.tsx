@@ -1,8 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router";
-import HomePage from "./pages/HomePage";
 import SideNav from "./components/SideNav/SideNav";
-import { Card, Col, Layout } from "antd";
+import { Card } from "antd";
 
 function App() {
   return (

@@ -48,3 +48,7 @@ export default tseslint.config({
   },
 });
 ```
+
+## Node.js runtime
+
+Use Node.js 24.22.1 or a newer patched Node.js 24 release. The version files pin the validated runtime; package engines restrict installation to this supported release line.

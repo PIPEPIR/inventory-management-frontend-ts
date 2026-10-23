@@ -4,12 +4,13 @@ import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 import prettierRecommended from "eslint-plugin-prettier/recommended";
+import react from "eslint-plugin-react";
 
 export default tseslint.config(
   { ignores: ["dist"] },
   {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
+    settings: { react: { version: "detect" } },
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
@@ -28,7 +29,8 @@ export default tseslint.config(
 
     extends: [
       js.configs.recommended,
-      react.configs.recommended,
+      react.configs.flat.recommended,
+      react.configs.flat["jsx-runtime"],
       ...tseslint.configs.recommended,
       prettierRecommended,
     ],
