@@ -1,5 +1,4 @@
-import { Button, Card, Menu, MenuProps } from "antd";
-import { useState } from "react";
+import { Card, Menu, MenuProps } from "antd";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -69,7 +68,6 @@ const items: MenuItem[] = [
 ];
 
 function SideNav() {
-  const onClick: MenuProps["onClick"] = () => {};
   return (
     <>
       <div className="flex flex-col bg-white h-screen">
